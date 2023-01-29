@@ -1,0 +1,31 @@
+[debug] [2023-01-29T20:00:19.042Z] ----------------------------------------------------------------------
+[debug] [2023-01-29T20:00:19.045Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Matias\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-01-29T20:00:19.046Z] CLI Version:   11.21.0
+[debug] [2023-01-29T20:00:19.047Z] Platform:      win32
+[debug] [2023-01-29T20:00:19.047Z] Node Version:  v18.13.0
+[debug] [2023-01-29T20:00:19.049Z] Time:          Sun Jan 29 2023 17:00:19 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-01-29T20:00:19.049Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-29T20:00:19.063Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-29T20:00:19.072Z] > authorizing via signed-in user (matiasclaro90@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Matias\Desktop\Nueva carpeta (3)\frontendnuevo\frontendnuevo
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-01-29T20:00:55.827Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-01-29T20:00:56.506Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-01-29T20:00:56.506Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]

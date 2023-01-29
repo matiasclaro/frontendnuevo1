@@ -9,7 +9,7 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-URL = 'http://localhost:8080/personas/';
+URL = 'https://backend-c8hy.onrender.com/personas/';
   
 
 constructor(private http: HttpClient) { }

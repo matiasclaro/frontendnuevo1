@@ -1,28 +1,27 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> 
-   <img src="../../../assets/293721388_5197008083714095_4838943313525803912_n.jpg" 
-   class="img-fluid" id="fotodeperfil">
-   </div>
- 
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> 
-   <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-   <p>Full stack Developer Jr</p>  
+<div class="row" *ngIf="persona">
+  
+   <div> <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+      Editar Perfil
+    </button>
   </div>
   
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8"> 
-<span>
-    
-<h1>Acerca de mi</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, veniam impedit doloribus nisi magnam quidem ipsam officiis voluptate eius consequuntur facere suscipit amet natus reiciendis minus soluta quia neque praesentium.
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    <img src={{persona.img}} class="img-fluid" id="fotodeperfil">
+  </div>
 
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> 
+    <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
+    <p>Full stack Developer Jr</p>
+  </div>
 
-</p>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descripcion" >
+    <span>
 
-</span>
+      <h1>Acerca de mi</h1>
+
+      <p>{{persona.descripcion}}</p>
+
+    </span>
+  </div>
 </div>
-</div>
-
-
- 
- 

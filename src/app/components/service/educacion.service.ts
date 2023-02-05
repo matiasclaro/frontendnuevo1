@@ -7,7 +7,12 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
+<<<<<<< Updated upstream
   URL = 'http://localhost:8080/educacion/';
+=======
+  URL = 'https://backend-c8hy.onrender.com/educacion/';
+  //URL = 'http://localhost:8080/educacion/';
+>>>>>>> Stashed changes
   
   constructor(private httpCliente :HttpClient) { }
 

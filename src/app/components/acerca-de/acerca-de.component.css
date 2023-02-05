@@ -11,12 +11,22 @@ div{
 /*estilo de la foto de perfil*/
 @media (min-width: 576px) {
     #fotodeperfil{
-        position: absolute;
-        width: 15%;
+       
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
+<<<<<<< Updated upstream
         left: 3%;
         top: 650px;
+=======
+        
+    }
+    .descripcion {
+        display: flex;
+        justify-content: center;
+        align-items: center;;
+
+
+>>>>>>> Stashed changes
     }
 }
     @media (max-width: 575px) {

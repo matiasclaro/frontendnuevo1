@@ -8,7 +8,12 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
+<<<<<<< Updated upstream
 expURL = 'http://localhost:8080/explab/'
+=======
+expURL = 'https://backend-c8hy.onrender.com/explab/';
+//expURL = 'http://localhost:8080/explab/';
+>>>>>>> Stashed changes
 
 constructor(private httpClient: HttpClient) { }
 

@@ -9,7 +9,12 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
+<<<<<<< Updated upstream
   authURL = 'http://localhost:8080/auth/';
+=======
+  authURL = 'https://backend-c8hy.onrender.com/auth/';
+  //authURL = 'http://localhost:8080/auth/';
+>>>>>>> Stashed changes
 
   constructor(private httpClient: HttpClient) { }
 

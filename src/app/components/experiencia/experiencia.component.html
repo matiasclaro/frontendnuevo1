@@ -6,7 +6,7 @@
         </button>
     </div>
 
-    <div class="col lg 1"></div>
+    <div class="col lg-1"></div>
     <div class="col-lg-11">
         <table class="table">
             <tbody>
@@ -16,11 +16,10 @@
                     </td>
                     <td>{{Experiencia.descripcionE}}</td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}"style="margin-left: 280px;">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                    
+                        <button class="btn btn-danger" style="margin-left: 10px; " (click)="delete(Experiencia.id)">
                             <i class="bi bi-trash-fill"></i> BORRAR</button>
                     </td>
                 </tr>

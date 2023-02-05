@@ -1,11 +1,11 @@
 .row{
-    padding: 20px;
+    padding: 90px;
    
 }
 
 div{
-    background-color: rgb(169, 115, 219);
-    text-align: center;
+    
+         text-align: center;
 }
 
 /*estilo de la foto de perfil*/
@@ -16,7 +16,15 @@ div{
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
         left: 3%;
-        top: 650px;
+        top:650px;
+        
+    }
+    .descripcion {
+        display: flex;
+        justify-content: center;
+        align-items: center;;
+
+
     }
 }
     @media (max-width: 575px) {
@@ -36,8 +44,12 @@ div{
 /*etiqueta nombre*/
 #nombre{
     font-weight: bold;
-    margin-top: 20%;
+
     
     }
 
 
+button{
+    margin-top: -100px;
+    margin-left: 80px;
+}

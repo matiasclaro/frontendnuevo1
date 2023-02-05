@@ -9,7 +9,12 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 expURL = 'http://localhost:8080/explab/'
+=======
+expURL = 'https://backend-c8hy.onrender.com/explab/';
+//expURL = 'http://localhost:8080/explab/';
+>>>>>>> Stashed changes
 =======
 expURL = 'https://backend-c8hy.onrender.com/explab/';
 //expURL = 'http://localhost:8080/explab/';

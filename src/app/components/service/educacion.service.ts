@@ -8,7 +8,12 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   URL = 'http://localhost:8080/educacion/';
+=======
+  URL = 'https://backend-c8hy.onrender.com/educacion/';
+  //URL = 'http://localhost:8080/educacion/';
+>>>>>>> Stashed changes
 =======
   URL = 'https://backend-c8hy.onrender.com/educacion/';
   //URL = 'http://localhost:8080/educacion/';

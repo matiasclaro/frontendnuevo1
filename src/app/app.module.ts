@@ -27,6 +27,7 @@ import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.com
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -67,7 +68,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
   ],
-  providers: [interceptorProvider],
+  providers: [interceptorProvider, DatePipe],
   bootstrap: [AppComponent]
   
 })

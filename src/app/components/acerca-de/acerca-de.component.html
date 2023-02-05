@@ -1,9 +1,6 @@
 <div class="row" *ngIf="persona">
   
-   <div> <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
-      Editar Perfil
-    </button>
-  </div>
+   
   
 
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -11,8 +8,8 @@
   </div>
 
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> 
-    <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-    <p>Full stack Developer Jr</p>
+    <h3 id="nombre">{{persona.nombre}} {{persona.apellido}}</h3>
+    <h4>Full stack Developer Jr</h4>
   </div>
 
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descripcion" >
@@ -23,5 +20,14 @@
       <p>{{persona.descripcion}}</p>
 
     </span>
-  </div>
+ 
 </div>
+
+</div>
+
+<button  type="button" class="btn btn-light" routerLink="/editacercade/1" *ngIf="isLogged">
+  <i class="bi bi-pencil-fill"></i> EDITAR PERFIL
+</button>
+
+
+

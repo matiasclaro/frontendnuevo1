@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/storage';
-import { async } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,14 +16,14 @@ export class ImageService {
       .catch(error => console.log(error)
       )
   }
-
+ 
   getImages() {
     const imageRef = ref(this.storage, 'imagen')
     list(imageRef)
       .then(async response => {
         for (let item of response.items) {
           this.url = await getDownloadURL(item);
-          console.log(" la url es :" + this.url)
+          console.log(" la Url es :" + this.url)
         }
       })
       .catch(error => console.log(error))

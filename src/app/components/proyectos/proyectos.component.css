@@ -1,19 +1,18 @@
-.row{
+
+
+
+table{
+    table-layout: fixed;
+    width: 100%;
     
-    padding: 80px;
 }
-.contenedor{
-    width: auto;
-}
-
-.parte1, .parte2{
-    display: inline-block;
-    text-align: justify;
-}
-
-.img-proyecto{
-    box-shadow: 10px 30px 30px black;
-     
-
-
+th, td {
+  
+    width: 100px;
+    word-wrap: break-word;
+    padding: 10 px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
 }

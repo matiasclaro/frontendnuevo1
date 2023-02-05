@@ -28,6 +28,9 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { DatePipe } from '@angular/common';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
+
 
 
 
@@ -53,6 +56,8 @@ import { DatePipe } from '@angular/common';
      EditSkillComponent,
      NewSkillComponent,
      EditAcercaDeComponent,
+     NewProyectoComponent,
+     EditProyectoComponent,
   
     
     

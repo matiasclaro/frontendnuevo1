@@ -1,33 +1,51 @@
-<div class="container" >
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreP">Nombre</label>
-                    <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required>
+<div class="row pagina">
+    <div class="margen">        
+        <div class="container">
+            <!-- <div *ngIf="isLogged == false">
+                <app-error404></app-error404>
+            </div> -->
+            <div *ngIf="isLogged == true">
+                <div class="titulo">
+                    <h1>Nuevo Proyecto</h1>
                 </div>
-                        
-                
-                <div class="form-group">
-                    <label for="descripcionP">Descripcion</label>
-                    <input type="text" class="form-control" id="descripcionP" name="descripcionP" 
-                    [(ngModel)]="descripcionP" required>
+                <div class="contenido">
+                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                        <div class="form-group">
+                            <label for="nombreP"><b>Nombre del Proyecto</b></label>
+                            <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcionP"><b>Descripción del Proyecto</b></label>
+                            <textarea type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="descripcionP" required></textarea>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="fechaP"><b>Fecha de realización del proyecto</b></label>
+                            <input type="text" class="form-control" id="fechaP" name="fechaP" [(ngModel)]="fechaP" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkP"><b>Link del proyecto</b></label>
+                            <input type="text" class="form-control" id="linkP" name="linkP" [(ngModel)]="linkP" required>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="imagenP"><b>Imagen Del Proyecto</b></label>
+                            <input type="file" class="form-control" id="imagenP" name="imagenP" (ngModel)="imagenP" 
+                            (change)="uploadImageProy($event)"
+                            accept=".jpg, .jpeg, .png">
+                        </div>
+                        <br>
+                        <div class="imagen">
+                            <img [src]="imagenProyectoService.urlProy" width="200px" alt="Imagen Proyecto" *ngIf='imagenProyectoService.urlProy != ""'>
+                        </div>
+                        <br>
+                        <div class="boton">
+                            <button type ="submit" class="btn btn-dark" [disabled]="f.invalid">Agregar</button>
+                            <button class="btn btn-dark " routerLink="">Cancelar</button>
+                        </div>
+                    </form>
+                    <br>
+                  
                 </div>
-                <div class="form-group">
-                    <label for="img">Imagen</label>
-                    <input type="file" class="form-control" id="img" name="img" 
-                        (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
-                </div>
-                <div class="imagen">
-                    <img [src]="imagenService.url" width="200px"> </div>
-
-                <br>
-                
-                <button class="btn btn-primary">
-                    Crear Proyecto
-                </button>
-               
-            </form>
+            </div>
         </div>
     </div>
 </div>

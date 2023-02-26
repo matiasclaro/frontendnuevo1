@@ -16,7 +16,8 @@ export class ProyectosComponent implements OnInit {
 
   constructor(private proyectoS: ProyectoService, private tokenService: TokenService,
      public activatedRouter: ActivatedRoute ) { }
-  isLogged = false;
+  
+     isLogged = false;
 
   ngOnInit(): void {
     this.cargarProyecto();

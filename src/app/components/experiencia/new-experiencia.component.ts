@@ -4,14 +4,22 @@ import { Experiencia } from '../model/experiencia';
 import { SExperienciaService } from '../service/s-experiencia.service';
 
 
+
 @Component({
   selector: 'app-new-experiencia',
   templateUrl: './new-experiencia.component.html',
   styleUrls: ['./new-experiencia.component.css']
 })
+
+
+
 export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
+  
+   
+
+
 
   constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 
@@ -30,5 +38,6 @@ export class NewExperienciaComponent implements OnInit {
       }
     )
   }
-
+ 
+ 
 }

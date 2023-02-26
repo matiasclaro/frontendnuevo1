@@ -1,33 +1,41 @@
-<div class="container" *ngIf="proyecto">
+<section class="vh-100 gradient-custom" *ngIf="proyecto">
+
     <div class="row">
         <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <form (ngSubmit)="onUpdateP()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreP">Nombre</label>
                     <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP"
                         required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="descripcionP">Descripcion</label>
                     <input type="text" class="form-control" id="descripcionP" name="descripcionP"
                         [(ngModel)]="proyecto.descripcionP" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="imgP">Imagen</label>
-                    <input type="file" class="form-control" id="imgP" name="imgP" 
-                        (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                    <label for="imagenP">Imagen</label>
+                    <input type="file" class="form-control" id="imagenP" name="imagenP"
+                        (change)="uploadImageProy($event)" accept=".jpg, .jpeg, .png">
                 </div>
                 <div class="imagen">
-                    <img [src]="imagenService.url" width="200px"> </div>
+                    <img [src]="imagenProyectoService.urlProy" width="200px"
+                        *ngIf='imagenProyectoService.urlProy != ""'>
+                </div>
                 <br>
-                
-                <button class="btn btn-primary">
+
+                <button type ="submit" class="btn btn-primary" [disabled]="f.invalid">
                     Editar Proyecto
                 </button>
-               
+
+                <button class="btn btn-primary" routerLink="">
+                    Cancelar
+                </button>
+
             </form>
         </div>
     </div>
-</div>
+
+</section>

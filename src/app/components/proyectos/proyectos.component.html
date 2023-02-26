@@ -10,22 +10,31 @@
     <div class="col-lg-11">
         <table class="table">
             <tbody>
-                <tr *ngFor="let Proyecto of proyecto" >
-                    <td>
+               
+                <tr *ngFor="let Proyecto of proyecto">
+                   <td >
                         <h2>{{Proyecto.nombreP}}</h2>
                     </td>
-                    <td id = "educD">{{Proyecto.descripcionP}}</td>
-
-                  <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editproyec/{{Proyecto.id}}" style="margin-left: 160px;">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    <td style="padding-left:125px;">{{Proyecto.descripcionP}}
+                 
+                     </td>
+                    <td style="padding-left:100px;" ><img src={{Proyecto.imagenP}} class="img-fluid" id="imagenP"> 
+                    </td> 
                     
-                        <button class="btn btn-danger" style="margin-left: 10px; " (click)="delete(Proyecto.id)">
+
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editproyec/{{Proyecto.id}} " 
+                            >
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        
+                            
+                        <button class="btn btn-danger"style="margin-left: 10px " (click)="delete(Proyecto.id)">
                             <i class="bi bi-trash-fill"></i> BORRAR</button>
-                    </td>
+
+                    
                 </tr>
             </tbody>
         </table>
     </div>
-    
+
 </div>

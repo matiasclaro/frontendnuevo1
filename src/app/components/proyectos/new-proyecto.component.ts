@@ -1,50 +1,69 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from '../model/proyecto';
-import { ImageService } from '../service/image.service';
+import { ImagenProyectoService } from '../service/imagen-proyecto.service';
 import { ProyectoService } from '../service/proyecto.service';
+import { TokenService } from '../service/token.service';
+
 
 @Component({
   selector: 'app-new-proyecto',
   templateUrl: './new-proyecto.component.html',
   styleUrls: ['./new-proyecto.component.css']
 })
-export class NewProyectoComponent implements OnInit  {
+export class NewProyectoComponent implements OnInit {
 
-
-  nombreP : string;
-  descripcionP : string;
-  imgP : string;
-
-
-  constructor(private proyectoS : ProyectoService, private router : Router ,
-     public activatedRouter: ActivatedRoute ,public imagenService : ImageService){
-
-  }
+  nombreP: string = '';
+  descripcionP: string = '';
+  imagenP: string = '';
   
-  
+
+  constructor(public imagenProyectoService: ImagenProyectoService, 
+              private router: Router,
+              private proyectoService: ProyectoService,
+              private tokenService: TokenService) { }
+
+  isLogged = false;
+
   ngOnInit(): void {
-   
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+
+    this.imagenProyectoService.clearUrl();
+
   }
+
   onCreate(): void {
-    const proyecto = new Proyecto(this.nombreP, this.descripcionP, this.imgP);
-    
-    this.proyectoS.save(proyecto).subscribe(
-      data =>{
-        alert("Proyecto añadido correctamente");
-        this.router.navigate([""]);
-      },err =>{
-        alert("falló");
-        this.router.navigate([""]);
+    this.imagenP = this.imagenProyectoService.urlProy;
+    const proy = new Proyecto(this.nombreP, this.descripcionP, this.imagenP);
+    this.proyectoService.save(proy).subscribe(
+      data => {
+        alert("Proyecto añadido");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló");
+        this.router.navigate(['']);
       }
     )
-      
-    }
 
-    uploadImage($event: any){
-      const id = this.activatedRouter.snapshot.params['id']
-      const name = "proyecto_" + id;
-      this.imagenService.uploadImage($event,name);
-      
-    }
   }
+
+  uploadImageProy($event:any) {
+    
+    const name = "imagenProy" + Date.now();
+    this.imagenProyectoService.uploadImageProy($event, name);
+
+  }
+
+
+
+
+
+
+
+
+}

@@ -1,18 +1,29 @@
-
+.row{
+    padding: 80px;
+}
 
 
 table{
     table-layout: fixed;
     width: 100%;
     
-}
-th, td {
   
-    width: 100px;
+    
+}
+
+th, td {
+    
+    width: 100%;
     word-wrap: break-word;
-    padding: 10 px;
+    padding: 0;
     border-top: 0px;
     border-right: 0px;
     border-bottom: 0px;
     border-left: 0px;
+}
+
+#imagenP{
+    width: 60px;
+    height: 60px;
+
 }

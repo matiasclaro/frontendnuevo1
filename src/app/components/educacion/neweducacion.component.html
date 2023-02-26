@@ -10,7 +10,7 @@
                     <label for="descripcionE">Descripcion de estudios</label>
                     <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
                 </div>
-                <button class="btn btn-primary">
+                <button type ="submit" class="btn btn-primary" [disabled]="f.invalid">
                     Agregar educacion
                 </button>
             </form>

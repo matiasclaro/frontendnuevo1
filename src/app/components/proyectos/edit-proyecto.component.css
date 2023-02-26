@@ -1,0 +1,14 @@
+
+
+    .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        background: rgb(244,215,227);
+        background: linear-gradient(90deg, rgba(244,215,227,1) 0%, rgba(215,207,238,1) 100%);
+}

@@ -3,14 +3,12 @@
     justify-content: space-between;
     align-items: center;
 }
-.redes{
-    margin-right: 1.5em;
-}
+
 #logoAP{
     width: 200px;
 }
 img{
-    width: 50px;
+    width: 60px;
 }
 .btn{
     border-width: medium;
@@ -35,3 +33,14 @@ img{
     
 }
 }
+
+.btn-outline-light{
+    width: 100px;
+    height: 60px;
+    
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+

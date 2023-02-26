@@ -2,7 +2,7 @@
     <h1>Proyecto</h1>
     <div class="col-lg-2">
         <button type="button" class="btn btn-dark" routerLink="/nuevoproyec" *ngIf="isLogged">
-            Agregar Proyecto
+            <b>Agregar Proyecto</b>
         </button>
     </div>
 
@@ -25,11 +25,11 @@
                     <td *ngIf="isLogged">
                         <button class="btn btn-light" routerLink="/editproyec/{{Proyecto.id}} " 
                             >
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                            <i class="bi bi-pencil-fill"></i><b>Editar</b></button>
                         
                             
                         <button class="btn btn-danger"style="margin-left: 10px " (click)="delete(Proyecto.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                            <i class="bi bi-trash-fill"></i><b>Borrar</b></button>
 
                     
                 </tr>

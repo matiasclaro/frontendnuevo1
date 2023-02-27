@@ -20,7 +20,8 @@
                      </td>
                     <td style="padding-left:100px;" ><img src={{Proyecto.imagenP}} class="img-fluid" id="imagenP"> 
                     </td> 
-                    
+                <td> <a href="{{Proyecto.linkP}}"> Ir al Proyecto </a>  
+                </td>
 
                     <td *ngIf="isLogged">
                         <button class="btn btn-light" routerLink="/editproyec/{{Proyecto.id}} " 

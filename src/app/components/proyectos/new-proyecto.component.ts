@@ -16,6 +16,7 @@ export class NewProyectoComponent implements OnInit {
   nombreP: string = '';
   descripcionP: string = '';
   imagenP: string = '';
+  linkP: string = "";
   
 
   constructor(public imagenProyectoService: ImagenProyectoService, 
@@ -39,7 +40,7 @@ export class NewProyectoComponent implements OnInit {
 
   onCreate(): void {
     this.imagenP = this.imagenProyectoService.urlProy;
-    const proy = new Proyecto(this.nombreP, this.descripcionP, this.imagenP);
+    const proy = new Proyecto(this.nombreP, this.descripcionP, this.imagenP,this.linkP);
     this.proyectoService.save(proy).subscribe(
       data => {
         alert("Proyecto añadido");

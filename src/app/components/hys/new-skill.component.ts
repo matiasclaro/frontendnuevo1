@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
 import { Skill } from '../model/skill';
+import { ImagenSkillService } from '../service/imagen-skill.service';
 import { SkillService } from '../service/skill.service';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-new-skill',
@@ -9,18 +11,31 @@ import { SkillService } from '../service/skill.service';
   styleUrls: ['./new-skill.component.css']
 })
 export class NewSkillComponent implements OnInit {
-  nombre: string ;
-  porcentaje : number;
-
-  constructor(private skillS : SkillService, private router :Router){}
+  nombreS: string ;
+  porcentajeS : number;
+  imagenS : string;
+  isLogged = false;
+  
+  constructor(private skillS : SkillService,
+     private router :Router,
+     public imagenSkill : ImagenSkillService,
+     private tokenService : TokenService ){}
   
   ngOnInit(): void {
-   
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+
+    this.imagenSkill.clearUrl();
+
   }
 
-
   onCreate(): void{
-    const skill = new Skill(this.nombre, this.porcentaje);
+    this.imagenS = this.imagenSkill.urlSkill;
+    const skill = new Skill(this.nombreS, this.porcentajeS, this.imagenS);
     this.skillS.save(skill).subscribe(
       data =>{
         alert("Skill creada correctamente.");
@@ -31,5 +46,12 @@ export class NewSkillComponent implements OnInit {
       }
     )
 
-}
+    }
+     
+    uploadImageSkill($event:any) {
+    
+      const name = "imagenSkill" + Date.now();
+      this.imagenSkill.uploadImageSkill($event, name);
+  
+    }
 }

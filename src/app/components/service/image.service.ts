@@ -32,26 +32,5 @@ export class ImageService {
   }
 
 
-  public uploadImageP($event: any, name: string ) {
-    const file = $event.target.files[0]
-    const imaRef = ref(this.storage, 'imagenP/' + name)
-    uploadBytes(imaRef, file)
-      .then(response => { this.getImagesP() })
-      .catch(error => console.log(error)
-      )
-  }
-
-
-  getImagesP() {
-    const imageRef= ref(this.storage, 'imagenP')
-    list(imageRef)
-      .then(async response => {
-        for (let item of response.items) {
-          this.url = await getDownloadURL(item);
-          console.log(" la Url es :" + this.url)
-        }
-      })
-      .catch(error => console.log(error))
-  }
   
 }

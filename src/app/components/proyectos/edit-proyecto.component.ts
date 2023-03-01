@@ -12,21 +12,21 @@ import { ProyectoService } from '../service/proyecto.service';
 })
 export class EditProyectoComponent implements OnInit {
 
-  proyecto : Proyecto = null;
-  
-  constructor(private activatedRouter: ActivatedRoute ,
-     private proyectoService : ProyectoService,
-      public imagenProyectoService : ImagenProyectoService ,
-      private router : Router){}
-  
+  proyecto: Proyecto = null;
+
+  constructor(private activatedRouter: ActivatedRoute,
+    private proyectoService: ProyectoService,
+    public imagenProyectoService: ImagenProyectoService,
+    private router: Router) { }
+
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.proyectoService.detail(id).subscribe(
-      data =>{
+      data => {
         this.proyecto = data;
-      }, err =>{
-         alert("Error al modificar");
-         this.router.navigate(['']);
+      }, err => {
+        alert("Error al modificar");
+        this.router.navigate(['']);
       }
     )
   }
@@ -45,15 +45,15 @@ export class EditProyectoComponent implements OnInit {
     )
   }
 
-  
 
-  uploadImageProy($event: any){
-     
-     const name = "imagenProy" + Date.now();
+
+  uploadImageProy($event: any) {
+
+    const name = "imagenProy" + Date.now();
     this.imagenProyectoService.uploadImageProy($event, name);
-    
-  }
-  
 
   }
+
+
+}
 

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Educacion } from '../model/educacion';
 import { EducacionService } from '../service/educacion.service';
+import { ImagenEduService } from '../service/imagen-edu.service';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-neweducacion',
@@ -9,22 +11,32 @@ import { EducacionService } from '../service/educacion.service';
   styleUrls: ['./neweducacion.component.css']
 })
 export class NeweducacionComponent implements OnInit  {
-  nombreE : string;
-  descripcionE : string;
+  nombreEdu : string;
+  descripcionEdu : string;
+  imgEdu : string;
 
 
-
-  constructor(private educacionS : EducacionService, private router : Router){
+  constructor(private educacionS : EducacionService, 
+                      private router : Router, 
+                      public imagenEduService : ImagenEduService,
+                      private tokenService : TokenService) {
 
   }
   
-  
+  isLogged = false;
+
   ngOnInit(): void {
-   
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    this.imagenEduService.clearUrl();
   }
   onCreate(): void {
-      
-    const educacion = new Educacion(this.nombreE, this.descripcionE);
+    this.imgEdu = this.imagenEduService.urlEdu;
+    const educacion = new Educacion(this.nombreEdu, this.descripcionEdu, this.imgEdu);
     this.educacionS.save(educacion).subscribe(
       data =>{
         alert("Educacion añadida correctamente");
@@ -36,4 +48,10 @@ export class NeweducacionComponent implements OnInit  {
     )
       }
 
+      uploadImageEdu($event:any) {
+    
+        const name = "imagenEdu" + Date.now();
+        this.imagenEduService.uploadImageEdu($event, name);
+    
+      }
 }

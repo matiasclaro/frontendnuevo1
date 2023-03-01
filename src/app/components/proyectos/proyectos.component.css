@@ -27,7 +27,36 @@ th, td {
 }
 
 #imagenP{
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 
+}
+
+.img-fluid:hover {
+
+    -webkit-transform: scale(2.9);
+    -ms-transform: scale(2.9);
+    transform: scale(2.9);
+    transition: transform .5s;
+
+}
+   
+
+@media (max-width: 576px) {
+
+.imagen-fluid {
+    display: flex;
+    position: absolute;
+}
+
+.descripcionP {
+    display: flex;
+}
+.nombreP {
+    display: flex;
+}
+.linkP {
+    display: flex;
+
+}
 }

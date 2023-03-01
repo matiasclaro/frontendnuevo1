@@ -21,15 +21,25 @@
                             <textarea type="text" class="form-control" id="descripcionE" name="descripcionE"
                                 [(ngModel)]="descripcionE" required></textarea>
                         </div>
-                        <b>* este campo es obligatorio</b> 
+                        <div class="form-group">
+                            <label for="imagenE"><b>Imagen de la Empresa</b></label>
+                            <input type="file" class="form-control" id="imagenE" name="imagenE" (ngModel)="imgE"
+                                (change)="uploadImageExp($event)" accept=".jpg, .jpeg, .png">
+                        </div>
+                        <b>* este campo es obligatorio</b>
                         <br>
                         <br>
+                        <div class="imagen">
+                            <img [src]="imagenExpService.urlExp" width="200px" alt="Imagen Experiencia"
+                                *ngIf='imagenExpService.urlExp != ""'>
+                        </div>
                         <div class="boton">
-                        <button type="submit" class="btn btn-dark" [disabled]="f.invalid">
-                            <b>Agregar</b>
-                        </button>
+                            <button type="submit" class="btn btn-dark" [disabled]="f.invalid">
+                                <b>Agregar</b>
+                            </button>
 
-                        <button class="btn btn-dark " style="margin-left: 10px " routerLink=""><b>Cancelar</b></button>
+                            <button class="btn btn-dark " style="margin-left: 10px "
+                                routerLink=""><b>Cancelar</b></button>
                         </div>
                     </form>
                 </div>

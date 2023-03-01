@@ -10,29 +10,33 @@
     <div class="col-lg-11">
         <table class="table">
             <tbody>
-               
+
                 <tr *ngFor="let Proyecto of proyecto">
-                   <td >
+                    <td class="nombreP">
                         <h2>{{Proyecto.nombreP}}</h2>
                     </td>
-                    <td style="padding-left:125px;">{{Proyecto.descripcionP}}
-                 
-                     </td>
-                    <td style="padding-left:100px;" ><img src={{Proyecto.imagenP}} class="img-fluid" id="imagenP"> 
-                    </td> 
-                <td> <a href="{{Proyecto.linkP}}"> Ir al Proyecto </a>  
-                </td>
+                    <td style="padding-left:125px;" class="descripcionP">{{Proyecto.descripcionP}}
+
+
+                    </td>
+
+                    <td style="padding-left:100px;"><img src={{Proyecto.imagenP}} class="img-fluid" id="imagenP">
+                    </td>
+
+                    <td class="linkP"> <a href="{{Proyecto.linkP}}"> Ir al Proyecto </a>
+                    </td>
+
+
 
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editproyec/{{Proyecto.id}} " 
-                            >
+                        <button class="btn btn-light" routerLink="/editproyec/{{Proyecto.id}} ">
                             <i class="bi bi-pencil-fill"></i><b>Editar</b></button>
-                        
-                            
-                        <button class="btn btn-danger"style="margin-left: 10px " (click)="delete(Proyecto.id)">
+
+
+                        <button class="btn btn-danger" style="margin-left: 10px " (click)="delete(Proyecto.id)">
                             <i class="bi bi-trash-fill"></i><b>Borrar</b></button>
 
-                    
+
                 </tr>
             </tbody>
         </table>

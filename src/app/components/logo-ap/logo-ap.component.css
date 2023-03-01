@@ -9,6 +9,7 @@
 }
 img{
     width: 60px;
+    margin: 3px;
 }
 .btn{
     border-width: medium;
@@ -40,6 +41,7 @@ img{
     
     justify-content: space-between;
     align-items: center;
+    margin-left: 3px;
     
     
 }

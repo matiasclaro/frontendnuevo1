@@ -1,7 +1,8 @@
 
 .row {
     margin-right: 0%;
-
+    background: rgb(244,215,227);
+    background: linear-gradient(90deg, rgba(244,215,227,1) 0%, rgba(215,207,238,1) 100%);
 }
     
     

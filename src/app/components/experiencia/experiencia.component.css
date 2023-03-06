@@ -43,8 +43,8 @@ th, td {
     border-bottom: 0px;
     border-left: 0px;
 }#imgE{
-    width: 100px;
-    height: 150px;
+    width: 150px;
+    height: 100px;
 
 }
 @media (max-width: 576px) {

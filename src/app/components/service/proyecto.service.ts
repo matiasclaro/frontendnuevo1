@@ -9,8 +9,8 @@ import { Storage, ref, uploadBytes, list,getDownloadURL } from '@angular/fire/st
 })
 export class ProyectoService {
 
-  //URL = 'https://backend-c8hy.onrender.com/proyectos/';
-  URL = 'http://localhost:8080/proyectos/';
+  URL = 'https://backend-c8hy.onrender.com/proyectos/';
+  //URL = 'http://localhost:8080/proyectos/';
 
   urlP: string = "";
  

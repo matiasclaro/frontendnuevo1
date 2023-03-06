@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <div class="row">
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> 
@@ -29,25 +30,40 @@
 =======
 >>>>>>> Stashed changes
   </div>
+=======
+<div class="row" *ngIf="persona">
   
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8"> 
-<span>
-    
-<h1>Acerca de mi</h1>
+   
+>>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab
+  
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, veniam impedit doloribus nisi magnam quidem ipsam officiis voluptate eius consequuntur facere suscipit amet natus reiciendis minus soluta quia neque praesentium.
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    <img src={{persona.img}} class="img-fluid" id="fotodeperfil">
+  </div>
 
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> 
+    <h3 id="nombre">{{persona.nombre}} {{persona.apellido}}</h3>
+    <h4>Full stack Developer Jr</h4>
+  </div>
 
-</p>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descripcion" >
+    <span>
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 </span>
 </div>
 </div>
+=======
+      <h1>Acerca de mi</h1>
+>>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab
 
+      <p>{{persona.descripcion}}</p>
 
+    </span>
  
+<<<<<<< HEAD
  
 =======
     </span>
@@ -59,3 +75,15 @@
   </div>
 </div>
 >>>>>>> Stashed changes
+=======
+</div>
+
+</div>
+
+<button  type="button" class="btn btn-light" routerLink="/editacercade/1" *ngIf="isLogged">
+  <i class="bi bi-pencil-fill"></i> EDITAR PERFIL
+</button>
+
+
+
+>>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab

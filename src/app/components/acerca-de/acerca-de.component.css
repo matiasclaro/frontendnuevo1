@@ -1,11 +1,11 @@
 .row{
-    padding: 20px;
+    padding: 90px;
    
 }
 
 div{
-    background-color: rgb(169, 115, 219);
-    text-align: center;
+    
+         text-align: center;
 }
 
 /*estilo de la foto de perfil*/
@@ -17,10 +17,14 @@ div{
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
         left: 3%;
+<<<<<<< HEAD
         top: 650px;
 =======
 =======
 >>>>>>> Stashed changes
+=======
+        top:650px;
+>>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab
         
     }
     .descripcion {
@@ -29,7 +33,10 @@ div{
         align-items: center;;
 
 
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab
     }
 }
     @media (max-width: 575px) {
@@ -49,8 +56,12 @@ div{
 /*etiqueta nombre*/
 #nombre{
     font-weight: bold;
-    margin-top: 20%;
+
     
     }
 
 
+button{
+    margin-top: -100px;
+    margin-left: 80px;
+}

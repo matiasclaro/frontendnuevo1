@@ -9,13 +9,35 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-URL = 'http://localhost:8080/personas/';
+//URL = 'https://backend-c8hy.onrender.com/personas/';
+URL = 'http://localhost:8080/personas/';  
+
+constructor(private httpClient: HttpClient) { }
+
   
+    public lista(): Observable<persona[]> {
+      return this.httpClient.get<persona[]>(this.URL +'lista');
+    } 
+  
+    public detail(id :number): Observable<persona>{
+  
+      return this.httpClient.get<persona>(this.URL +`detail/${id}`);
+    }
+  
+   /* public save(educacion : Educacion): Observable<any> {
+      return this.httpCliente.post<any>(this.URL +'create', educacion);
+    }*/
+  
+    public update(id :number, Persona: persona):  Observable<any>{
+  
+      return this.httpClient.put<any>(this.URL + `update/${id}`,Persona);
+      }
+  
+      /*public delete(id :number): Observable<any>{
+        return this.httpCliente.delete(this.URL + `delete/${id}`);  
+  
+      }*/
 
-constructor(private http: HttpClient) { }
 
-  public getPersona() : Observable<persona> {
-    return this.http.get<persona>(this.URL + 'traer/perfil');
-    
   }
-}
+

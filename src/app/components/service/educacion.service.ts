@@ -7,22 +7,11 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-  //URL = 'https://backend-c8hy.onrender.com/educacion/';
->>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab
-  URL = 'http://localhost:8080/educacion/';
-=======
+
   URL = 'https://backend-c8hy.onrender.com/educacion/';
+
   //URL = 'http://localhost:8080/educacion/';
->>>>>>> Stashed changes
-=======
-  URL = 'https://backend-c8hy.onrender.com/educacion/';
-  //URL = 'http://localhost:8080/educacion/';
->>>>>>> Stashed changes
-  
+
   constructor(private httpClient :HttpClient) { }
 
   public lista(): Observable<Educacion[]> {

@@ -8,22 +8,11 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-expURL = 'http://localhost:8080/explab/'
-=======
+
+//expURL = 'http://localhost:8080/explab/'
+
 expURL = 'https://backend-c8hy.onrender.com/explab/';
-//expURL = 'http://localhost:8080/explab/';
->>>>>>> Stashed changes
-=======
-expURL = 'https://backend-c8hy.onrender.com/explab/';
-//expURL = 'http://localhost:8080/explab/';
->>>>>>> Stashed changes
-=======
-//expURL = 'https://backend-c8hy.onrender.com/explab/';
-expURL = 'http://localhost:8080/explab/';
->>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab
+
 
 constructor(private httpClient: HttpClient) { }
 

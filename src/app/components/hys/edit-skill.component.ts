@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Skill } from '../model/skill';
+import { ImagenSkillService } from '../service/imagen-skill.service';
 import { SkillService } from '../service/skill.service';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-edit-skill',
@@ -11,10 +13,12 @@ import { SkillService } from '../service/skill.service';
 export class EditSkillComponent implements OnInit {
   skill : Skill = null;
 
-  constructor(
-    private skillS: SkillService, 
-    private activatedRouter: ActivatedRoute,
-    private router: Router){}
+  constructor(private skillS : SkillService,
+    private router :Router,
+    public imagenSkill : ImagenSkillService,
+    
+    private activatedRouter: ActivatedRoute ){}
+ 
   
   
   ngOnInit(): void {
@@ -30,14 +34,23 @@ export class EditSkillComponent implements OnInit {
   } 
   onUpdate(){
     const id= this.activatedRouter.snapshot.params['id'];
+    this.skill.imagenS = this.imagenSkill.urlSkill;
     this.skillS.update(id, this.skill).subscribe(
-      data=>{
+    data=>{
         this.router.navigate(['']);
       },err=>{
         alert("Error al modificar la skill");
         this.router.navigate(['']);
       }
     )
+}
+
+
+uploadImageSkill($event:any) {
+    
+  const name = "imagenSkill" + Date.now();
+  this.imagenSkill.uploadImageSkill($event, name);
+
 }
 }
  

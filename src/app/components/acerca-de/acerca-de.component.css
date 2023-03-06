@@ -46,7 +46,7 @@ div{
             border-radius: 100%;
             box-shadow: 3px 3px 3px grey;
             left: 33%;
-            top: 950px;
+            top: 550px;
         }
     /*falta un media para cuando es muy chica*/
 }
@@ -64,4 +64,12 @@ div{
 button{
     margin-top: -100px;
     margin-left: 80px;
+}
+
+
+.row{
+
+
+    margin-right: 0%;
+
 }

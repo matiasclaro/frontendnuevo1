@@ -1,0 +1,57 @@
+<section class="vh-100 gradient-custom">
+    <div class="row pagina">
+        <div class="margen">
+            <div class="container">
+
+
+                <div class="titulo">
+                    <br>
+                    <br>
+                    <h1><b>Nuevo Proyecto</b></h1>
+                </div>
+                <div class="contenido">
+                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                        <div class="form-group">
+                            <label for="nombreP"><b>Nombre del Proyecto: *</b></label>
+                            <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="nombreP"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcionP"><b>Descripción del Proyecto: *</b></label>
+                            <textarea type="text" class="form-control" id="descripcionP" name="descripcionP"
+                                [(ngModel)]="descripcionP" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="linkP"><b>Link del proyecto</b></label>
+                            <input type="text" class="form-control" id="linkP" name="linkP" [(ngModel)]="linkP"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="imagenP"><b>Imagen del Proyecto</b></label>
+                            <input type="file" class="form-control" id="imagenP" name="imagenP" (ngModel)="imagenP"
+                                (change)="uploadImageProy($event)" accept=".jpg, .jpeg, .png">
+                        </div>
+                        <b>* este campo es obligatorio</b>
+                        <br>
+                        <br>
+                        <div class="imagen">
+                            <img [src]="imagenProyectoService.urlProy" width="200px" alt="Imagen Proyecto"
+                                *ngIf='imagenProyectoService.urlProy != ""'>
+                        </div>
+
+
+                        <div class="boton">
+                            <button type="submit" class="btn btn-dark" [disabled]="f.invalid"><b>Agregar</b></button>
+                            <button class="btn btn-dark " style="margin-left: 10px "
+                                routerLink=""><b>Cancelar</b></button>
+                        </div>
+                    </form>
+                    <br>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

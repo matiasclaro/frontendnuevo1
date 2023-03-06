@@ -1,23 +1,43 @@
 <div class="row">
-    <h1>Proyectos Realizados</h1>
-    <div class="contenedor">
-        <div class= "col-sm-12 col-md-7 col-lg-7 parte1"> 
-        
-            <h1>Porfolio </h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, harum totam aspernatur fuga, quos minus odio adipisci enim quibusdam cumque earum et temporibus numquam est sed. Voluptates sequi harum molestias.</p>
-        
-       
-        </div>
-            <div class= "col-sm-12 col-md-3 col-lg-3 
-            offset-md-1 offset-lg-1 parte2"> 
-            <img src="../../../assets/imagenPortfolio.png" 
-            class="img-fluid 
-            img-proyecto">
+    <h1>Proyecto</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevoproyec" *ngIf="isLogged">
+            <b>Agregar Proyecto</b>
+        </button>
+    </div>
 
-               
-        </div>
+    <div class="col lg-1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody class="tabla">
+
+                <tr *ngFor="let Proyecto of proyecto">
+                    <td class="nombreP">
+                        <h2>{{Proyecto.nombreP}}</h2>
+                    </td>
+                    <td class="descripcionP">{{Proyecto.descripcionP}}
+                    </td>
+
+                    <td><img src={{Proyecto.imagenP}} class="img-fluid" id="imagenP">
+                    </td>
+
+                    <td class="linkP"> <a href="{{Proyecto.linkP}}"> Ir al Proyecto </a>
+                    </td>
 
 
+
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editproyec/{{Proyecto.id}} ">
+                            <i class="bi bi-pencil-fill"></i><b>Editar</b></button>
+
+
+                        <button class="btn btn-danger" style="margin-left: 10px " (click)="delete(Proyecto.id)">
+                            <i class="bi bi-trash-fill"></i><b>Borrar</b></button>
+
+                        </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </div>

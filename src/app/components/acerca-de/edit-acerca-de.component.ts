@@ -36,7 +36,7 @@ export class EditAcercaDeComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la persona");
+        alert("Perfil Modificado");
         this.router.navigate(['']);
       }
     )
@@ -54,3 +54,4 @@ export class EditAcercaDeComponent implements OnInit {
 
   }
 
+ 

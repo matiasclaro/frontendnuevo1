@@ -21,25 +21,18 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
 import { EditeducacionComponent } from './components/educacion/editeducacion.component';
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab
 import { EditSkillComponent } from './components/hys/edit-skill.component';
 import { NewSkillComponent } from './components/hys/new-skill.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-<<<<<<< HEAD
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
 import { DatePipe } from '@angular/common';
->>>>>>> 5a2868893070e90ac6cd7c8e4ab213e570e547ab
+import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
+import { ErrorTailorModule } from '@ngneat/error-tailor';
+
+
 
 
 
@@ -65,6 +58,8 @@ import { DatePipe } from '@angular/common';
      EditSkillComponent,
      NewSkillComponent,
      EditAcercaDeComponent,
+     NewProyectoComponent,
+     EditProyectoComponent,
   
     
     
@@ -80,8 +75,8 @@ import { DatePipe } from '@angular/common';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
   ],
-  providers: [interceptorProvider, DatePipe],
-  bootstrap: [AppComponent]
+  providers: [interceptorProvider, DatePipe,],
+  bootstrap: [AppComponent, ]
   
 })
 export class AppModule { }

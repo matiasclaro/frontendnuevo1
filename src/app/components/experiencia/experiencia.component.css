@@ -1,16 +1,29 @@
 .row{
     padding: 80px;
     
+
+
+        margin-right: 0%;
+    
+    
 }
 
+.img-fluid:hover {
 
+    -webkit-transform: scale(2.9);
+    -ms-transform: scale(2.9);
+    transform: scale(2.9);
+    transition: transform .5s;
+
+}
 
 h1,h3{
     display: inline;
 }
 
-
-
+.nombreE{
+    padding-right: 1.15cm;
+}
 
 table{
     table-layout: fixed;
@@ -21,7 +34,7 @@ table{
 
 th, td {
     
-    width: 100px;
+    width: 100%;
     word-wrap: break-word;
     padding: 0;
    
@@ -29,4 +42,39 @@ th, td {
     border-right: 0px;
     border-bottom: 0px;
     border-left: 0px;
+}#imgE{
+    width: 150px;
+    height: 100px;
+
+}
+@media (max-width: 576px) {
+
+    .img-fluid {
+        position: relative;
+        
+    }
+
+    .descripcionE{
+        display: flex;
+    }
+
+    .nombreE {
+        display: flex;
+        padding-right: 0cm;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .tabla {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+   
+    .botonE {
+        display: flex;
+        
+    }
 }

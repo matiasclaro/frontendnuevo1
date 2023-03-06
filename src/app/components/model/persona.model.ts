@@ -5,10 +5,10 @@ export class persona{
     descripcion : string;
     img: string;
 
-    constructor(nombre: string,apellido: string,  img: string , descripcion: string){
+    constructor(nombre: string,apellido: string,   descripcion: string , img: string ){
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
-        descripcion = descripcion;
+        this.descripcion = descripcion;
     }
 }

@@ -1,27 +1,30 @@
-.row{
+.row {
     padding: 80px;
-   
-   
+     margin-right: 0%;
 
 
-        margin-right: 0%;
-    
-   
 }
 
-
-
-h1,h3{
+h1,
+h3 {
     display: inline;
 }
-table{
+
+table {
     table-layout: fixed;
     width: 100%;
-    
+
 }
-th, td {
-  
-    width: 100px;
+
+.nombreEdu {
+    padding-right: 1.15cm;
+} 
+
+
+th,
+td {
+
+    width: 100%;
     word-wrap: break-word;
     padding: 0;
     border-top: 0px;
@@ -32,8 +35,48 @@ th, td {
 
 
 
-#imgEdu{
+#imgEdu {
     width: 100px;
     height: 100px;
 
+}
+.img-fluid:hover {
+
+    -webkit-transform: scale(2.9);
+    -ms-transform: scale(2.9);
+    transform: scale(2.9);
+    transition: transform .5s;
+
+}
+
+
+@media (max-width: 576px) {
+
+    .img-fluid {
+        position: relative;
+        
+    }
+
+    .descripcionEdu{
+        display: flex;
+    }
+
+    .nombreEdu {
+        display: flex;
+        padding-right: 0cm;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .tabla {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+   
+    .botonEdu {
+        display: flex;
+    }
 }

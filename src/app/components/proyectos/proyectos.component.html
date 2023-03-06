@@ -9,16 +9,16 @@
     <div class="col lg-1"></div>
     <div class="col-lg-11">
         <table class="table">
-            <tbody>
+            <tbody class="tabla">
 
                 <tr *ngFor="let Proyecto of proyecto">
                     <td class="nombreP">
                         <h2>{{Proyecto.nombreP}}</h2>
                     </td>
                     <td class="descripcionP">{{Proyecto.descripcionP}}
- </td>
+                    </td>
 
-                    <td style="padding-left:100px;"><img src={{Proyecto.imagenP}} class="img-fluid" id="imagenP">
+                    <td><img src={{Proyecto.imagenP}} class="img-fluid" id="imagenP">
                     </td>
 
                     <td class="linkP"> <a href="{{Proyecto.linkP}}"> Ir al Proyecto </a>
@@ -34,7 +34,7 @@
                         <button class="btn btn-danger" style="margin-left: 10px " (click)="delete(Proyecto.id)">
                             <i class="bi bi-trash-fill"></i><b>Borrar</b></button>
 
-
+                        </td>
                 </tr>
             </tbody>
         </table>

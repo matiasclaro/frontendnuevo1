@@ -9,27 +9,25 @@
     <div class="col lg-1"></div>
     <div class="col-lg-11">
         <table class="table">
-
-            <tbody>
+            <tbody class="tabla">
                 <tr *ngFor="let Educacion of educacion">
-                    <td>
+                    <td class="nombreEdu">
                         <h2>{{Educacion.nombreEdu}}</h2>
                     </td>
-                    <td id="educD">{{Educacion.descripcionEdu}}</td>
-                   
-                    <td style="padding-left:100px;"><img src={{Educacion.imgEdu}} class="img-fluid" id="imgEdu">
+                    <td class="descripcionEdu">{{Educacion.descripcionEdu}}</td>
+
+                    <td><img src={{Educacion.imgEdu}} class="img-fluid" id="imgEdu">
                     </td>
-                
+
                     
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}"
-                            style="margin-left: 60px;">
+                    <td class="botonEdu" *ngIf="isLogged">
+                        <button class="btn btn-light" id ="button" routerLink="/editedu/{{Educacion.id}}">
                             <i class="bi bi-pencil-fill"></i><b>Editar</b></button>
 
                         <button class="btn btn-danger" style="margin-left: 10px; " (click)="delete(Educacion.id)">
                             <i class="bi bi-trash-fill"></i><b>Borrar</b></button>
                     </td>
-                    
+
                 </tr>
             </tbody>
         </table>
